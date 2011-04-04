@@ -1,12 +1,12 @@
 <!doctype html> 
 <html> 
-	<head> 
-		<title>cave</title> 
-		<meta charset="utf-8" /> 
-	</head> 
-	<body> 
-		<canvas id="c"></canvas> 
-		<script> 
+    <head> 
+        <title>cave</title> 
+        <meta charset="utf-8" /> 
+    </head> 
+    <body> 
+        <canvas id="c"></canvas> 
+        <script> 
 
 var canvas=document.body.children[0];
 var ctx = canvas.getContext("2d");
@@ -75,7 +75,7 @@ function reset() {
 }
 
 function loop(){
-		var new_t = get_time()
+        var new_t = get_time()
         var elapsed=(new_t-t)/1000;
            
         var pressed=pressed_key|pressed_mouse;
@@ -206,7 +206,7 @@ function loop(){
         if (state=='crashed' && d < tail.length/1.5){
             state='stopped'
         }
-	    setTimeout(loop,1000/fps)
+        setTimeout(loop,1000/fps)
 }   
 
 reset()
@@ -236,7 +236,7 @@ onclick= function(e) {
 }
 
 
-		</script> 
-	</body> 
+        </script> 
+    </body> 
 </html>
 
