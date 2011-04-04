@@ -132,7 +132,7 @@ function loop(){
             max_width= Math.max(w, max_width);
             var x=(width/2)*c/tail.length,y=(tail[c][0])*height;
             ctx.beginPath();
-            alpha=size*200;
+            alpha=size;
             ctx.fillStyle='rgba('+(tail[c][1])+','+alpha+')';
             //ctx.lineWidth=w
             //ctx.moveTo(x,y);
@@ -160,7 +160,9 @@ function loop(){
             }
             ctx.restore()
         } else if (state =='running'){
-            col=pressed?'225,0,25':'0,0,0';
+            var f =Math.round((accell + 2) * 16)
+            col=pressed?'225,0,'+f:'0,0,'+f+'';
+            //col=  + (pressed?192:0) + ',0,0';
             tail.push([pos,col]);
             score+=Math.round(elapsed*256);
 
